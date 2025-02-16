@@ -1,0 +1,12 @@
+.future-weather {
+  padding: 70px 0 0 0;
+}
+.future-weather-icon {
+  width: 40px;
+  display: block;
+  margin: 0 auto;
+}
+.card-text {
+  font-size: 14px;
+  font-weight: bold;
+}
