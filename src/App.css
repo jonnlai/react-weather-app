@@ -32,3 +32,9 @@ a:hover {
   font-family: "Mali", cursive;
   background-color: rgba(255, 255, 255, 0.7);
 }
+
+.footer {
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
