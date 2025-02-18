@@ -1,28 +1,28 @@
-body {
+.App body {
   background-size: cover;
 }
 
-h1 {
+.App h1 {
   font-size: 50px;
   font-weight: bold;
 }
 
-h2 {
+.App h2 {
   font-size: 16px;
   position: relative;
   bottom: -8px;
   font-weight: bold;
 }
 
-a {
+.App a {
   text-decoration: none;
 }
 
-a:hover {
+.App a:hover {
   text-decoration: rgb(2, 2, 91);
 }
 
-.weather-app {
+.App .weather-app {
   border: 2px solid #000;
   border-radius: 20px;
   max-width: 900px;
@@ -33,7 +33,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.footer {
+.App .footer {
   font-size: 14px;
   text-align: center;
   font-weight: bold;

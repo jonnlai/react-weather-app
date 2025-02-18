@@ -1,6 +1,7 @@
-.search-engine {
+.Seacrh .search-engine {
   margin: 0 0 30px 0;
 }
-.current-city-button {
+.Search .current-city-button {
   font-size: 11px;
+  width: 93px;
 }

@@ -14,25 +14,25 @@ export default function Weather() {
   return (
     <div className="Weather">
       <div className="row mb-4">
-        <div className="col-6">
+        <div className="col-12 col-md-6 text-center">
           <div className="weather-data">
             <h1>{weatherData.city}</h1>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-6 col-md-3">
           <img
             src={weatherData.icon}
             alt={weatherData.description}
-            className="today-icon"
+            className="today-icon text-center"
           />
-          <div className="description">Light rain</div>
+          <div className="description text-center">Light rain</div>
         </div>
-        <div className="col-3">
-          <div className="weather-data">
-            <h1>
-              <span>{weatherData.temperature}</span>
+        <div className="col-6 col-md-3">
+          <div className="weather-data text-center">
+            <div>
+              <span className="temperature">{weatherData.temperature}</span>
               <span className="temp-scale"> °C </span>
-            </h1>
+            </div>
             <p>
               Humidity: <span>{weatherData.humidity}</span>% <br />
               Wind: <span>{weatherData.wind}</span> km/h

@@ -3,7 +3,7 @@ import "./Future.css";
 
 export default function Future({ day, maxTemp, minTemp }) {
   return (
-    <div className="col-2 Future">
+    <div className="col-6 col-md-2 mt-3 Future">
       <div className="card">
         <h5 className="card-header">{day}</h5>
         <div className="card-body">

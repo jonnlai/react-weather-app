@@ -1,25 +1,30 @@
-.weather-data {
+.Weather .weather-data {
   position: relative;
-  bottom: -30px;
+  bottom: -15px;
 }
 
-.today-icon {
+.Weather .today-icon {
   width: 120px;
   display: block;
   margin: 0 auto;
 }
 
-.description {
+.Weather .description {
   text-align: center;
   font-weight: bold;
 }
-.description::first-letter {
+.Weather .description::first-letter {
   text-transform: capitalize;
 }
 
-.temp-scale {
+.Weather .temperature {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.Weather .temp-scale {
   font-size: 20px;
   position: relative;
-  top: -10px;
+  top: -20px;
   left: -5px;
 }
