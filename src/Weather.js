@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import Future from "./Future";
+import Update from "./Update";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -15,6 +16,7 @@ export default function Weather() {
       icon: response.data.daily[0].condition.icon_url,
       humidity: response.data.daily[0].temperature.humidity,
       wind: response.data.daily[0].wind.speed,
+      date: new Date(response.data.daily[0].time * 1000),
     });
   }
 
@@ -57,6 +59,9 @@ export default function Weather() {
           <Future day="Fri" maxTemp={9} minTemp={5} />
           <Future day="Sat" maxTemp={8} minTemp={4} />
           <Future day="Sun" maxTemp={7} minTemp={5} />
+        </div>
+        <div>
+          <Update date={weatherData.date} />
         </div>
       </div>
     );

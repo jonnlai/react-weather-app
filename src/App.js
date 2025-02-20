@@ -2,7 +2,6 @@ import "./App.css";
 
 import Search from "./Search";
 import Weather from "./Weather";
-import Update from "./Update";
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
       <div className="weather-app">
         <Search />
         <Weather />
-        <Update />
         <div class="footer">
           <a
             href="https://github.com/jonnlai/react-weather-app"
