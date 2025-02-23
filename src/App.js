@@ -1,14 +1,12 @@
 import "./App.css";
 
 import Search from "./Search";
-import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
       <div className="weather-app">
-        <Search />
-        <Weather />
+        <Search defaultCity="London" />
         <div class="footer">
           <a
             href="https://github.com/jonnlai/react-weather-app"
