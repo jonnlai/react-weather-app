@@ -33,9 +33,7 @@ export default function Weather(props) {
           </div>
         </div>
       </div>
-      <div class="row text-center">
-        <Future city={props.data.city} />
-      </div>
+      <Future city={props.data.city} />
       <div>
         <Update date={props.data.date} />
       </div>

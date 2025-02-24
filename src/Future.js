@@ -11,8 +11,8 @@ export default function Future(props) {
     setReady(true);
   }
 
-  function displayDay() {
-    let date = new Date(forecast[1].time * 1000);
+  function displayDay(data) {
+    let date = new Date(data.time * 1000);
     let day = date.getDay();
 
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -22,23 +22,32 @@ export default function Future(props) {
 
   if (ready) {
     return (
-      <div className="col-6 col-md-2 mt-3 Future">
-        <div className="card">
-          <h5 className="card-header">{displayDay()}</h5>
-          <div className="card-body">
-            <h5 className="card-title">
-              <img
-                src={forecast[1].condition.icon_url}
-                alt={forecast[1].condition.description}
-                className="future-weather-icon"
-              />
-            </h5>
-            <p className="card-text">
-              {Math.round(forecast[1].temperature.maximum)}° |{" "}
-              {Math.round(forecast[1].temperature.minimum)}°
-            </p>
-          </div>
-        </div>
+      <div class="row text-center Future">
+        {forecast.map(function (dailyForecast, index) {
+          if (index < 6) {
+            return (
+              <div className="col-6 col-md-2 mt-3" key={index}>
+                <div className="card">
+                  <h5 className="card-header">{displayDay(dailyForecast)}</h5>
+                  <div className="card-body">
+                    <h5 className="card-title">
+                      <img
+                        src={dailyForecast.condition.icon_url}
+                        alt={dailyForecast.condition.description}
+                        className="future-weather-icon"
+                      />
+                    </h5>
+                    <p className="card-text">
+                      {Math.round(dailyForecast.temperature.maximum)}° |{" "}
+                      {Math.round(dailyForecast.temperature.minimum)}°
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+          return null;
+        })}
       </div>
     );
   } else {
