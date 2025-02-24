@@ -34,12 +34,7 @@ export default function Weather(props) {
         </div>
       </div>
       <div class="row text-center">
-        <Future day="Tue" maxTemp={8} minTemp={3} />
-        <Future day="Wed" maxTemp={5} minTemp={4} />
-        <Future day="Thu" maxTemp={6} minTemp={2} />
-        <Future day="Fri" maxTemp={9} minTemp={5} />
-        <Future day="Sat" maxTemp={8} minTemp={4} />
-        <Future day="Sun" maxTemp={7} minTemp={5} />
+        <Future city={props.data.city} />
       </div>
       <div>
         <Update date={props.data.date} />
