@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Future.css";
 
 export default function Future(props) {
   let [ready, setReady] = useState(false);
   let [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+    setReady(false);
+  }, [props.city]);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
@@ -45,8 +49,9 @@ export default function Future(props) {
                 </div>
               </div>
             );
+          } else {
+            return null;
           }
-          return null;
         })}
       </div>
     );
