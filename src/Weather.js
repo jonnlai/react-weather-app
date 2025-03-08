@@ -2,7 +2,6 @@ import React from "react";
 import "./Weather.css";
 import Future from "./Future";
 import Update from "./Update";
-import Temperature from "./Temperature";
 
 export default function Weather(props) {
   return (
@@ -25,7 +24,10 @@ export default function Weather(props) {
         </div>
         <div className="col-6 col-md-3">
           <div className="weather-data text-center">
-            <Temperature celsius={props.data.temperature} />
+            <span className="temperature">
+              {Math.round(props.data.temperature)}
+            </span>
+            <span className="temp-scale"> °C </span>
             <p>
               Humidity: <span>{props.data.humidity}</span>% <br />
               Wind: <span>{props.data.wind}</span> km/h
